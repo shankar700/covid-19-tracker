@@ -1,0 +1,133 @@
+:root {
+    --confirmed-color: #3fa0ff;
+    --recovered-color: #2ba848;
+    --deaths-color: #dc3646;
+}
+
+.app_container {
+    display: grid;
+    grid-template-rows: 2% 13% auto;
+    justify-items: center;
+}
+
+.cards_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: auto;
+    height: 50vh;
+}
+
+.cards_card {
+    border-bottom: 8px solid gray;
+    padding: 15px;
+    margin-left: 30px;
+    border-radius: 5px;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 1s;
+}
+
+.cards_card:hover {
+    transform: scale(1.025);
+}
+
+.cards_confirmed .cards_card {
+    border-color: var(--confirmed-color);
+}
+
+.cards_recovered .cards_card {
+    border-color: var(--recovered-color);
+}
+
+.cards_deaths .cards_card {
+    border-color: var(--deaths-color);
+}
+
+.cards_cardTitle {
+    font: roboto;
+    font-size: 1.25rem;
+}
+
+.cards_delta {
+    position: absolute;
+    font-size: 0.7em;
+    background-color: gray;
+    color: #fff;
+    border-radius: 25%;
+    margin-left: 5px;
+    padding: 1px 3px;
+}
+
+.cards_confirmed .cards_delta {
+    background-color: var(--confirmed-color);
+}
+
+.cards_recovered .cards_delta {
+    background-color: var(--recovered-color);
+}
+
+.cards_deaths .cards_delta {
+    background-color: var(--deaths-color);
+}
+
+.search_bar_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: auto;
+}
+
+.search_bar_input {
+    /* border-radius: 5px; */
+    border: none;
+    box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.1);
+    padding-right: 150px;
+    transition: all 0.75s;
+}
+
+.search_bar_input:focus {
+    outline: none;
+    transform: scale(1.15);
+}
+
+.top_five_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: auto;
+    margin: 10px 0 0 0;
+    width: 90vw;
+    min-width: 600px;
+    border-bottom: 2px solid darkgray;
+}
+
+.top_five_row {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80vw;
+}
+
+.top_five_row h5,
+.top_five_row p {
+    width: 150px;
+    text-align: left;
+    padding: 2px 5px;
+}
+
+.cards_loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100vh;
+}
+
+.top_five_text_muted {
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.LastUpdated {
+    align-self: center;
+    margin-top: 20px;
+}
